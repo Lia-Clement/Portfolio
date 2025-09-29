@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Lia Clement - Bookbinding</title>
+<title>Portfolio Lia Clement - ADD TITLE HERE</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -94,44 +94,54 @@
   .menu-item:hover .submenu { display: flex; }
   .menu-item:hover > a .arrow { transform: rotate(90deg); }
 
-  /* Portfolio Section moved to top, no bottom space */
-  .portfolio-section { 
-    padding-top: 80px; /* just under the header */
-    padding-bottom: 0; /* remove bottom space */
-    max-width: 1200px; 
-    margin: 0 auto; 
-    display: flex; 
-    justify-content: center;
-    align-items: flex-start; /* top alignment */
-  }
+  /* Portfolio Section */
+  .portfolio-section { padding: 100px 30px 50px 30px; max-width: 1200px; margin:0 auto; }
+  .portfolio-row { display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
 
-  /* Full-screen giant white box at top */
+  .row-large img { max-height: 450px; width: auto; border-radius:6px; }
+  .row-small img { max-height:300px; width:auto; border-radius:6px; margin:0 10px; }
+  .row-equal-height img { height: 450px; width:auto; border-radius:6px; }
+  .row-shark img { height: 450px; width:auto; border-radius:6px; }
+
+  .image-with-caption { display:flex; flex-direction: column; align-items: center; max-width: fit-content; }
+  .image-with-caption p { margin-top:8px; font-size:14px; text-align:center; }
+
   .portfolio-text { 
     background: rgba(255,255,255,0.85); 
-    padding: 180px 100px; 
-    border-radius: 24px; 
-    line-height: 2.2em; 
-    text-align: center; 
-    font-size: 3.5em;
-    width: 99vw;
-    height: calc(100vh - 80px); /* fill screen minus header */
-    overflow: auto;
+    padding: 20px; 
+    border-radius:6px; 
+    margin-bottom:30px; 
+    line-height:1.5em; 
+    text-align: left; 
+    flex: 1;
   }
   .portfolio-text h3 { margin-top:0; }
+  .portfolio-text .challenge p { margin:0; }
 
-  /* Divider & Email */
-  .divider { border-top: 2px solid rgba(0,0,0,0.2); margin: 25px 0; }
-  p.email { text-align:center; font-size: 1.8em; margin: 15px 0; }
+  .portfolio-text-row { display: flex; gap: 20px; align-items: flex-start; }
+  .portfolio-text-row img { width: auto; border-radius: 6px; }
+
+  /* Subheadings */
+  .portfolio-subheading { font-size: 20px; font-weight: bold; margin: 40px 0 20px 0; }
 
   @media(max-width:800px){
-    .portfolio-text { 
-      font-size: 2.5em;
-      padding: 100px 50px; 
-      width: 95vw;
-      height: calc(100vh - 80px); /* fill screen minus header */
-    }
+    .row-large img{ max-width:100%; max-height:350px; }
+    .row-small img{ max-width:100%; max-height:250px; margin:0 0 10px 0; }
+    .row-equal-height img { height:350px; }
+    .row-shark img { height:350px; }
+    .portfolio-text-row { flex-direction: column; }
+    .portfolio-text-row img { max-width: 100%; height:auto; }
   }
 
+.divider { border-top: 2px solid rgba(0,0,0,0.2); margin: 40px 0; }
+
+.divider {
+  border-top: 2px solid rgba(0,0,0,0.2);
+  margin: 15px 0; /* reduce from 40px */
+}
+.nav-links .menu-item:last-child > a {
+  padding-top: 2px;  /* reduce space above the name */
+  padding-bottom: 6px; /* keep bottom padding normal */
 </style>
 </head>
 <body>
@@ -167,7 +177,8 @@
     </div>
     <div class="menu-item"><a href="sketches.html">Sketches</a></div>
     <div class="menu-item"><a href="bookbinding.html">Bookbinding</a></div>
-    <div class="divider"></div>
+<!-- Divider -->
+<div class="divider"></div>
     <div class="menu-item"><a href="Lia.html">Contact</a></div>
   </nav>
 
@@ -176,9 +187,35 @@
 </header>
 
 <section class="portfolio-section">
-  <div class="portfolio-text">
-      <p>This page is currently under construction</p>
+
+    <div class="portfolio-row row-large">
+    <img src="allbooks.jpeg" alt="NAME">
   </div>
+  <div class="portfolio-text">
+    <h3>Concept/inspiration</h3>
+    <p>Learning how to bookbind and trying different techniques</p>
+    <h3>Materials and techniques</h3>
+    <p>Bookbinding 2020</p>
+    <h3>Challenges/discoveries</h3>
+    <div class="challenge">
+      <p>The first book I made was the brown one. I stained the paper and the cover fabric with coffee and black tea. I didn’t dilute the mixture enough, so the outcome was much darker than intended and still smells like coffee many years later. The first book also didn’t yet have a curved spine or head- and tailbands, so the edges look a bit rough.</p>
+      <p>In later books, I learned how to create a curved spine, add a ribbon marker, and sew in head- and tailbands. I also tried my hand at creating slightly three-dimensional appliqués on the covers. Through making books of varying sizes, I discovered that the direction of the paper matters a lot for the finished outcome: if the pages are sewn together in the wrong direction, they stand upright instead of falling to each side when the book is opened.</p>
+    </div>
+  </div>
+
+  <div class="portfolio-row row-small">
+    <img src="straightbook.jpeg" alt="wrong page direction">
+    <img src="pages1.jpeg" alt="correct page direction">
+    <img src="book2.jpeg" alt="first spine straight">
+    <img src="book1.jpeg" alt="second spine curved">
+  </div>
+
+<!-- Divider -->
+<div class="divider"></div>
+<p>Email: lia@little-english.at</p>
+<div class="divider"></div>
+
+
 </section>
 
 <script>
@@ -200,7 +237,9 @@ menuItems.forEach(parent => {
     });
   }
 });
+
 </script>
 
 </body>
 </html>
+
